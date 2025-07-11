@@ -1,0 +1,9 @@
+@font-face {
+	font-family: 'HelveticaNeueCyr-Roman';
+	src: url('../fonts/helveticaneuecyr-roman.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/helveticaneuecyr-roman.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/helveticaneuecyr-roman.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/helveticaneuecyr-roman.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/helveticaneuecyr-roman.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/helveticaneuecyr-roman.svg#helveticaneuecyr-roman') format('svg'); /* Chrome < 4, Legacy iOS */
+}
