@@ -77,6 +77,13 @@
     font-display: swap;
 }
 
+.container {
+    max-width: 1220px;
+    width: 100%;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
 :root {
     --accent: #44BD31;
     --accent-hover: #20C905;
@@ -86,15 +93,17 @@ body {
     font-family: 'HelveticaNeueCyr', 'Roboto', sans-serif;
     font-size: 16px;
 }
-a{
+
+a {
     text-decoration: none;
     color: inherit;
-    white-space: nowrap;
     transition: color .2s;
 }
-a:hover{
+
+a:hover {
     color: var(--accent-hover);
 }
+
 .header {
     font-family: 'HelveticaNeueCyr', 'Roboto', sans-serif;
     font-size: 16px;
@@ -106,9 +115,7 @@ a:hover{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1360px;
-    margin: 0 auto;
-    padding: 0 15px;
+
 
 }
 
@@ -116,9 +123,11 @@ a:hover{
 .header__top {
     padding: 12px 0;
 }
-.header__bottom{
+
+.header__bottom {
     margin-top: 12px;
 }
+
 .header__nav-list {
     display: flex;
     gap: 43px;
@@ -219,7 +228,7 @@ a:hover{
 .header__catalog-icon {
     width: 18px;
     height: 18px;
-    
+
 }
 
 /* --- Поиск --- */
@@ -240,7 +249,7 @@ a:hover{
 
 .header__search-input {
     flex: 1;
-   
+
     border: 0;
     outline: none;
     font-size: 16px;
@@ -260,9 +269,12 @@ a:hover{
     cursor: pointer;
     transition: opacity .2s;
 }
+
 input[type="search"]::-webkit-search-cancel-button {
-    cursor: pointer;           /* скрыть полностью */
-  }
+    cursor: pointer;
+    /* скрыть полностью */
+}
+
 .header__search-btn:hover {
     opacity: .8;
 }
@@ -278,21 +290,23 @@ input[type="search"]::-webkit-search-cancel-button {
     margin: 0;
 }
 
-.header__action a{
+.header__action a {
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: 10px;
     font-weight: 500;
-    color:#242424;
+    color: #242424;
 }
+
 .header__action a:hover {
-    color:var(--accent-hover);
+    color: var(--accent-hover);
 }
-.header__action a img{
+
+.header__action a img {
     width: 24px;
     height: 24px;
-  
+
 }
 
 
@@ -368,28 +382,589 @@ input[type="search"]::-webkit-search-cancel-button {
 
     /* убираем подписи под иконками */
 }
+
 /* по умолчанию мобильный блок невидим */
-.header__mobile{display:none;}
+.header__mobile {
+    display: none;
+}
 
-@media (max-width:786px){
+@media (max-width:786px) {
 
-  /* полностью прячем оба «десктопных» ряда */
-  .header__top,
-  .header__bottom{display:none;}
+    /* полностью прячем оба «десктопных» ряда */
+    .header__top,
+    .header__bottom {
+        display: none;
+    }
 
-  /* выводим mobile-версию */
-  .header__mobile{
-    display:flex;align-items:center;justify-content:flex-start;
-    height:56px;                  /* общая высота шапки */
-    padding:0 15px;
-    background:#fff;
+    /* выводим mobile-версию */
+    .header__mobile {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        height: 56px;
+        /* общая высота шапки */
+        padding: 0 15px;
+        background: #fff;
+    }
+
+    .header__mobile-burger {
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 0;
+        border-radius: 8px;
+        background: var(--accent);
+        cursor: pointer;
+    }
+
+    .header__mobile-burger img {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+.breadcrumbs-list {
+    display: flex;
+    /* элементы в одну линию */
+    flex-wrap: wrap;
+    gap: 0;
+    /* чтобы управлять промежутком сами */
+    padding: 16px 0;
+    margin: 0;
+    list-style: none;
+}
+
+.breadcrumbs-item {
+    display: flex;
+    /* нужно, чтобы ::after учитывался как часть flex-потока */
+    align-items: center;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #868686;
+}
+
+/* разделитель добавляем всем, КРОМЕ последнего пункта */
+.breadcrumbs-item:not(:last-child)::after {
+    content: "";
+    width: 20px;
+    /* размеры SVG */
+    height: 20px;
+    margin: 0 2px;
+    /* расстояние до текста */
+    background: url("/img/header/breadcrumb.svg") center / contain no-repeat;
+
+}
+
+.catalog__main-views {
+    display: flex;
+    gap: 8px;
+}
+
+.view-input {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+
+.view-btn {
+    display: block;
+    width: 28px;
+    /* ваш размер */
+    height: 28px;
+    cursor: pointer;
+    transition: background-color .2s ease;
+    /* начальный цвет иконки (серый) */
+    background-color: #d1d1d1;
+}
+
+/* =========== делаем из SVG маску =========== */
+.view-btn--grid,
+.view-btn--list {
+    /* положение + размеры маски */
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+}
+
+/* каждому label — свой файл маски */
+.view-btn--grid {
+    -webkit-mask-image: url("/img/catalog/grid.svg");
+    mask-image: url("/img/catalog/grid.svg");
+}
+
+.view-btn--list {
+    -webkit-mask-image: url("/img/catalog/list.svg");
+    mask-image: url("/img/catalog/list.svg");
+}
+
+/* =========== перекрашиваем =========== */
+/* ховер – слегка подсветим */
+.view-btn:hover {
+    background-color: #44bd31;
+    /* зелёный */
+    opacity: .7;
+    /* можно убрать, если не нужно полупрозрачности */
+}
+
+/* выбранный radio → соседний label зелёный на 100 % */
+.view-input:checked+.view-btn {
+    background-color: #44bd31;
+    opacity: 1;
+}
+
+/* ───────── Базовая геометрия ───────── */
+.catalog__main-select {
+    position: relative;
+    display: inline-block;
+    /* можно задать ширину, если нужно */
+    font: 16px/1.3 "Inter", sans-serif;
+    color: #555;
+}
+
+/* ───────── Кнопка ───────── */
+.select__btn {
+    all: unset;
+    /* убираем системные стили */
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    padding: 4px 0;
+}
+
+.select__arrow {
+    transition: transform .25s ease;
+    opacity: .6;
+}
+
+/* ───────── Список ───────── */
+.select__list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin: 6px 0 0;
+    padding: 4px 0;
+    list-style: none;
+    min-width: 100%;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, .04);
+    display: none;
+    /* скрыт по умолчанию */
+    z-index: 50;
+}
+
+.select__option {
+    padding: 6px 14px;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background-color .15s;
+}
+
+.select__option:hover {
+    background: #f5f5f5;
+}
+
+.select__option.active {
+    color: #44BD31;
+}
+
+/* ───────── Состояние «open» ───────── */
+.catalog__main-select.open .select__list {
+    display: block;
+}
+
+.catalog__main-select.open .select__arrow {
+    transform: rotate(180deg);
+}
+
+.catalog__row {
+    display: flex;
+    gap: 30px;
+
+}
+
+.catalog h1 {
+    color: #1A1A1A;
+    font-size: 30px;
+    line-height: 1.3;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.catalog__main-bars {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.catalog__main-bar {
+    border-radius: 70px;
+    background-color: #F6F6F6;
+    color: #5D5D5D;
+    font-size: 12px;
+    line-height: 1.4;
+    font-weight: 400;
+    padding: 6px 12px 6px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.catalog__main-bar.active,
+.catalog__main-bar:hover {
+    background-color: #CAEFC5;
+    color: #2A881B;
+}
+
+.catalog__main-filters {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #EDEDED;
+    margin-bottom: 28px;
+}
+
+.catalog__main-list {
+    display: flex;
+    gap: 40px 20px;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.catalog__main-item {
+    width: calc((100% - 60px) / 4);
+}
+
+.catalog__main-row {
+    margin-bottom: 25px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+}
+
+.catalog__main-prices {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.catalog__main-price {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #5D5D5D;
+}
+
+.catalog__main-oldprice {
+    padding-bottom: 2px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.3;
+    text-decoration: line-through;
+    color: #D1D1D1;
+}
+
+.catalog__main-score {
+    padding-bottom: 2px;
+    display: flex;
+    gap: 2px;
+    align-items: flex-start;
+}
+
+.catalog__main-score-num {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: #1C1C1C;
+}
+
+.catalog__main-score-img {
+    display: block;
+    width: 12px;
+    height: 12px;
+    padding-top: 1px;
+
+}
+
+.catalog__main-button {
+    padding: 12px 36px;
+    background-color: var(--accent);
+    border-radius: 8px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    transition: 0.2s;
+}
+
+.catalog__main-button:hover {
+    background-color: var(--accent-hover);
+}
+
+.catalog__main-title {
+    display: block;
+    margin-bottom: 14px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: #5D5D5D;
+}
+
+/* ───── контейнер с картинкой ───── */
+.catalog__main-imagewrapper {
+    position: relative;
+    /*   важно: для absolute-кнопок   */
+    width: auto;
+    height: 135px;
+    /* ваши размеры */
+    margin-bottom: 24px;
+}
+
+.catalog__main-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+/* ───── блок с двумя кнопками ───── */
+.catalog__main-item-action-buttons {
+    position: absolute;
+    top: 8px;
+    /* подберите отступы */
+    right: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* ───── сами кнопки ───── */
+.action-btn {
+    width: 24px;
+    height: 24px;
+    border: none;
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
+
+    /* превращаем SVG в «маску» */
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+
+    /* начальный цвет (серый) */
+    background-color: #d1d1d1;
+    transition: background-color .2s ease;
+}
+
+/* конкретные иконки */
+.favorite {
+    -webkit-mask-image: url("/img/catalog/heart.svg");
+    mask-image: url("/img/catalog/heart.svg");
+}
+
+.compare {
+    -webkit-mask-image: url("/img/catalog/vesi.svg");
+    mask-image: url("/img/catalog/vesi.svg");
+}
+
+/* hover-эффект */
+.action-btn:hover {
+    background-color: #9c9c9c;
+    /* чуть темнее серый */
+}
+
+/* «активное» состояние (выбрано) */
+.action-btn.active {
+    background-color: #44BD31;
+    /* ваш зелёный */
+}
+
+@media(max-width:768px) {
+
+    .catalog h1 {
+        font-size: 22px;
+    }
+
+    .catalog__main-bars {
+        margin-bottom: 24px;
+        gap: 7px;
+    }
+
+    .catalog__main-bar {
+        border-radius: 30px;
+        font-size: 14px;
+    }
+}
+
+/* ---------- базовые настройки боковой колонки ---------- */
+.catalog__filters {
+    width: 278px;
+    min-width: 278px;
+    /* подгоните под макет */
+    padding: 24px 24px 30px;
+    font-size: 14px;
+    line-height: 1.3;
+    font-weight: 400;
+    color: #1A1A1A;
+    background: #F6F6F6;
+    border-radius: 12px;
+}
+
+/* ---------- аккордеон ---------- */
+.filter {
+    border-radius: 8px;
+}
+
+.filter+.filter {
+    margin-top: 12px;
+}
+
+.filter__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+    padding: 10px 0;
+}
+
+.filter__head::-webkit-details-marker {
+    display: none;
+}
+
+.filter__arrow {
+    flex-shrink: 0;
+    transition: transform .25s ease;
+    opacity: .6;
+}
+
+details[open] .filter__arrow {
+    transform: rotate(180deg);
+    opacity: 1;
+}
+
+.filter__body {
+    padding: 4px 0 10px;
+}
+
+/* ---------- разделительная линия ---------- */
+.filter-divider {
+    height: 1px;
+    background: #e7e7e7;
+    margin: 12px 0;
+}
+
+/* ---------- блок цены ---------- */
+.price-inputs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.price-input {
+    flex: 1 1 0;
+    min-width: 0;
+    padding: 8px 10px;
+    border: 1px solid #d9d9d9;
+    border-radius: 6px;
+    font: inherit;
+    text-align: center;
+}
+
+.price-dash {
+    color: #a0a0a0;
+    user-select: none;
+}
+
+/* ---------- чекбокс «В наличии» ---------- */
+.filter-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
   }
-
-  .header__mobile-burger{
-    width:48px;height:48px;
-    display:flex;align-items:center;justify-content:center;
-    border:0;border-radius:8px;
-    background:var(--accent);cursor:pointer;
+  
+  .filter-checkbox input { display: none; }
+  
+  /* сам квадрат */
+  .checkbox-custom {
+    position: relative;            /* нужно для ::after */
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    border: 1.8px solid #d1d1d1;
+    background: transparent;
+    transition: background-color .2s, border-color .2s;
   }
-  .header__mobile-burger img{width:18px;height:18px;}
+  
+  /* псевдо-элемент → белая галочка по центру */
+  .checkbox-custom::after {
+    content: "";
+    position: absolute;
+    inset: 0;                      /* растягиваем на весь квадрат */
+    background: url("/img/catalog/check.png") center/16px no-repeat;
+    opacity: 0;                    /* скрыта по умолчанию */
+    transition: opacity .2s;
+  }
+  
+  /* активное состояние */
+  .filter-checkbox input:checked + .checkbox-custom {
+    background-color: #44BD31;     /* зелёный фон */
+    border-color: #44BD31;
+  }
+  
+  .filter-checkbox input:checked + .checkbox-custom::after {
+    opacity: 1;                    /* показываем белую галочку */
+  }
+  
+/* ---------- «чипсы» брендов ---------- */
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.chips li {
+    margin: 0;
+}
+
+.chips input {
+    display: none;
+}
+
+.chips label {
+    display: inline-block;
+    padding: 6px 14px;
+    border: 1px solid #dcdcdc;
+    border-radius: 20px;
+    background: #fafafa;
+    cursor: pointer;
+    transition: .15s;
+}
+
+.chips input:checked+label {
+    background: #44BD31;
+    color: #fff;
+    border-color: #44BD31;
 }
