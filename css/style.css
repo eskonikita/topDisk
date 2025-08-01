@@ -298,7 +298,7 @@ a:hover {
     width: 24px;
     height: 24px;
     margin-right: 12px;
-    background: url("..img/header/Magnifier.png") center/24px no-repeat;
+    background: url("..../img/header/Magnifier.png") center/24px no-repeat;
     border: 0;
     cursor: pointer;
     transition: opacity .2s;
@@ -436,7 +436,7 @@ input[type="search"]::-webkit-search-cancel-button {
     .header__search-btn {
         width: 19px;
         height: 19px;
-        background: url(..img/header/Magnifier.png) center / 19px no-repeat;
+        background: url(..../img/header/Magnifier.png) center / 19px no-repeat;
 
     }
 
@@ -502,7 +502,7 @@ input[type="search"]::-webkit-search-cancel-button {
     height: 20px;
     margin: 0 2px;
     /* расстояние до текста */
-    background: url("img/header/breadcrumb.svg") center / contain no-repeat;
+    background: url("../img/header/breadcrumb.svg") center / contain no-repeat;
 
 }
 
@@ -550,13 +550,13 @@ input[type="search"]::-webkit-search-cancel-button {
 
 /* каждому label — свой файл маски */
 .view-btn--grid {
-    -webkit-mask-image: url("img/catalog/grid.svg");
-    mask-image: url("img/catalog/grid.svg");
+    -webkit-mask-image: url("../img/catalog/grid.svg");
+    mask-image: url("../img/catalog/grid.svg");
 }
 
 .view-btn--list {
-    -webkit-mask-image: url("img/catalog/list.svg");
-    mask-image: url("img/catalog/list.svg");
+    -webkit-mask-image: url("../img/catalog/list.svg");
+    mask-image: url("../img/catalog/list.svg");
 }
 
 /* =========== перекрашиваем =========== */
@@ -820,30 +820,30 @@ input[type="search"]::-webkit-search-cancel-button {
         content: "";
         width: 24px;
         height: 24px;
-        mask: url(img/nav/main.svg) center/contain no-repeat;
-        -webkit-mask: url(img/nav/main.svg) center/contain no-repeat;
+        mask: url(../img/nav/main.svg) center/contain no-repeat;
+        -webkit-mask: url(../img/nav/main.svg) center/contain no-repeat;
         background-color: currentColor;
     }
 
 
     .nav-main::before {
-        mask-image: url(img/nav/main.svg);
+        mask-image: url(../img/nav/main.svg);
     }
 
     .nav-cart::before {
-        mask-image: url(img/nav/cart.svg);
+        mask-image: url(../img/nav/cart.svg);
     }
 
     .nav-favorite::before {
-        mask-image: url(img/nav/heart.svg);
+        mask-image: url(../img/nav/heart.svg);
     }
 
     .nav-catalog::before {
-        mask-image: url(img/nav/catalog.svg);
+        mask-image: url(../img/nav/catalog.svg);
     }
 
     .nav-user::before {
-        mask-image: url(img/nav/user.svg);
+        mask-image: url(../img/nav/user.svg);
     }
 
     .mobile-nav__item {
@@ -998,23 +998,23 @@ input[type="search"]::-webkit-search-cancel-button {
 
 /* конкретные иконки */
 .favorite {
-    -webkit-mask-image: url("img/catalog/heart.svg");
-    mask-image: url("img/catalog/heart.svg");
+    -webkit-mask-image: url("../img/catalog/heart.svg");
+    mask-image: url("../img/catalog/heart.svg");
 }
 
 .compare {
-    -webkit-mask-image: url("img/catalog/vesi.svg");
-    mask-image: url("img/catalog/vesi.svg");
+    -webkit-mask-image: url("../img/catalog/vesi.svg");
+    mask-image: url("../img/catalog/vesi.svg");
 }
 
 .back {
-    -webkit-mask-image: url("img/catalog/arrow-back.svg");
-    mask-image: url("img/catalog/arrow-back.svg");
+    -webkit-mask-image: url("../img/catalog/arrow-back.svg");
+    mask-image: url("../img/catalog/arrow-back.svg");
 }
 
 .filter-ico {
-    -webkit-mask-image: url("img/filter.svg");
-    mask-image: url("img/filter.svg");
+    -webkit-mask-image: url("../img/filter.svg");
+    mask-image: url("../img/filter.svg");
     background-color: #444444;
 }
 
@@ -1357,7 +1357,7 @@ details[open] .filter__arrow {
 
     inset: 0;
     /* растягиваем на весь квадрат */
-    background: url("img/catalog/check.png") center/13px no-repeat;
+    background: url("../img/catalog/check.png") center/13px no-repeat;
     opacity: 0;
     /* скрыта по умолчанию */
     transition: opacity .2s;
@@ -1709,193 +1709,193 @@ footer {
 
 /* ---------- DESKTOP ---------- */
 .card--smartphones {
-    --pic: url("img/category/1.png");
+    --pic: url("../img/category/1.png");
 }
 
 .card--smartphones1 {
-    --pic: url("img/category/01.png");
+    --pic: url("../img/category/01.png");
 }
 
 .card--electronics {
-    --pic: url("img/category/2.png");
+    --pic: url("../img/category/2.png");
 }
 
 .card--home-tech {
-    --pic: url("img/category/3.png");
+    --pic: url("../img/category/3.png");
 }
 
 .card--home-garden {
-    --pic: url("img/category/4.png");
+    --pic: url("../img/category/4.png");
 }
 
 .card--toys {
-    --pic: url("img/category/5.png");
+    --pic: url("../img/category/5.png");
 }
 
 .card--phone-accessories {
-    --pic: url("img/category/6.png");
+    --pic: url("../img/category/6.png");
 }
 
 .card--computers {
-    --pic: url("img/category/7.png");
+    --pic: url("../img/category/7.png");
 }
 
 .card--sports {
-    --pic: url("img/category/8.png");
+    --pic: url("../img/category/8.png");
 }
 
 .card--audio {
-    --pic: url("img/category/9.png");
+    --pic: url("../img/category/9.png");
 }
 
 .card--auto {
-    --pic: url("img/category/10.png");
+    --pic: url("../img/category/10.png");
 }
 
 .card--cables {
-    --pic: url("img/category/11.png");
+    --pic: url("../img/category/11.png");
 }
 
 .card--consumables {
-    --pic: url("img/category/12.png");
+    --pic: url("../img/category/12.png");
 }
 
 .card--tools {
-    --pic: url("img/category/13.png");
+    --pic: url("../img/category/13.png");
 }
 
 .card--flash {
-    --pic: url("img/category/14.png");
+    --pic: url("../img/category/14.png");
 }
 
 .card--giftcards {
-    --pic: url("img/category/15.png");
+    --pic: url("../img/category/15.png");
 }
 
 
 /* ---------- MOBILE ---------- */
 @media (max-width:768px) {
     .card--smartphones {
-        --pic: url("img/category/1mob.png");
+        --pic: url("../img/category/1mob.png");
     }
 
     .card--smartphones1 {
-        --pic: url("img/category/01mob.png");
+        --pic: url("../img/category/01mob.png");
     }
 
     .card--electronics {
-        --pic: url("img/category/2mob.png");
+        --pic: url("../img/category/2mob.png");
     }
 
     .card--home-tech {
-        --pic: url("img/category/3mob.png");
+        --pic: url("../img/category/3mob.png");
     }
 
     .card--home-garden {
-        --pic: url("img/category/4mob.png");
+        --pic: url("../img/category/4mob.png");
     }
 
     .card--toys {
-        --pic: url("img/category/5mob.png");
+        --pic: url("../img/category/5mob.png");
     }
 
     .card--phone-accessories {
-        --pic: url("img/category/6mob.png");
+        --pic: url("../img/category/6mob.png");
     }
 
     .card--computers {
-        --pic: url("img/category/7mob.png");
+        --pic: url("../img/category/7mob.png");
     }
 
     .card--sports {
-        --pic: url("img/category/8mob.png");
+        --pic: url("../img/category/8mob.png");
     }
 
     .card--audio {
-        --pic: url("img/category/9mob.png");
+        --pic: url("../img/category/9mob.png");
     }
 
     .card--auto {
-        --pic: url("img/category/10mob.png");
+        --pic: url("../img/category/10mob.png");
     }
 
     .card--cables {
-        --pic: url("img/category/11mob.png");
+        --pic: url("../img/category/11mob.png");
     }
 
     .card--consumables {
-        --pic: url("img/category/12mob.png");
+        --pic: url("../img/category/12mob.png");
     }
 
     .card--tools {
-        --pic: url("img/category/13mob.png");
+        --pic: url("../img/category/13mob.png");
     }
 
     .card--flash {
-        --pic: url("img/category/14mob.png");
+        --pic: url("../img/category/14mob.png");
     }
 
     .card--giftcards {
-        --pic: url("img/category/15mob.png");
+        --pic: url("../img/category/15mob.png");
     }
 }
 
 .banner1 {
-    --pic: url("img/product/banner1.png");
+    --pic: url("../img/product/banner1.png");
 }
 
 .banner2 {
-    --pic: url("img/product/banner2.png");
+    --pic: url("../img/product/banner2.png");
 }
 
 /* ---------- изображения DESKTOP ---------- */
 .card--tv {
-    --pic: url("img/subcategory/1.png");
+    --pic: url("../img/subcategory/1.png");
 }
 
 .card--video {
-    --pic: url("img/subcategory/2.png");
+    --pic: url("../img/subcategory/2.png");
 }
 
 .card--actioncams {
-    --pic: url("img/subcategory/3.png");
+    --pic: url("../img/subcategory/3.png");
 }
 
 .card--consoles {
-    --pic: url("img/subcategory/4.png");
+    --pic: url("../img/subcategory/4.png");
 }
 
 .card--smart-home {
-    --pic: url("img/subcategory/5.png");
+    --pic: url("../img/subcategory/5.png");
 }
 
 .card--tv-accessories {
-    --pic: url("img/subcategory/6.png");
+    --pic: url("../img/subcategory/6.png");
 }
 
 .card--games {
-    --pic: url("img/subcategory/7.png");
+    --pic: url("../img/subcategory/7.png");
 }
 
 .card--photo {
-    --pic: url("img/subcategory/8.png");
+    --pic: url("../img/subcategory/8.png");
 }
 
 .card--watches {
-    --pic: url("img/subcategory/9.png");
+    --pic: url("../img/subcategory/9.png");
 }
 
 .card--used-tech {
-    --pic: url("img/subcategory/10.png");
+    --pic: url("../img/subcategory/10.png");
 }
 
 @media (max-width:378px) {
     .banner1 {
-        --pic: url("img/product/banner1mob.png");
+        --pic: url("../img/product/banner1mob.png");
     }
 
     .banner2 {
-        --pic: url("img/product/banner2mob.png");
+        --pic: url("../img/product/banner2mob.png");
     }
 }
 
@@ -1903,43 +1903,43 @@ footer {
 @media (max-width:768px) {
 
     .card--tv {
-        --pic: url("img/subcategory/1mob.png");
+        --pic: url("../img/subcategory/1mob.png");
     }
 
     .card--video {
-        --pic: url("img/subcategory/2mob.png");
+        --pic: url("../img/subcategory/2mob.png");
     }
 
     .card--actioncams {
-        --pic: url("img/subcategory/3mob.png");
+        --pic: url("../img/subcategory/3mob.png");
     }
 
     .card--consoles {
-        --pic: url("img/subcategory/4mob.png");
+        --pic: url("../img/subcategory/4mob.png");
     }
 
     .card--smart-home {
-        --pic: url("img/subcategory/5mob.png");
+        --pic: url("../img/subcategory/5mob.png");
     }
 
     .card--tv-accessories {
-        --pic: url("img/subcategory/6mob.png");
+        --pic: url("../img/subcategory/6mob.png");
     }
 
     .card--games {
-        --pic: url("img/subcategory/7mob.png");
+        --pic: url("../img/subcategory/7mob.png");
     }
 
     .card--photo {
-        --pic: url("img/subcategory/8mob.png");
+        --pic: url("../img/subcategory/8mob.png");
     }
 
     .card--watches {
-        --pic: url("img/subcategory/9mob.png");
+        --pic: url("../img/subcategory/9mob.png");
     }
 
     .card--used-tech {
-        --pic: url("img/subcategory/10mob.png");
+        --pic: url("../img/subcategory/10mob.png");
     }
 }
 
@@ -2141,7 +2141,7 @@ footer {
     border-radius: 50%;
     border: none;
     background:
-        url("img/slider/slider-arrow-white.svg") center / 20px 20px no-repeat,
+        url("../img/slider/slider-arrow-white.svg") center / 20px 20px no-repeat,
         rgba(0, 0, 0, .5);
     cursor: pointer;
     transition: background .2s;
@@ -2153,14 +2153,14 @@ footer {
 
 .hits__nav:hover {
     background:
-        url("img/slider/slider-arrow-white.svg") center / 20px 20px no-repeat,
+        url("../img/slider/slider-arrow-white.svg") center / 20px 20px no-repeat,
         rgba(0, 0, 0, .7);
 }
 
 /* прячем стрелки, если слайдов меньше, чем видно */
 .hits__nav.swiper-button-disabled {
     background:
-        url("img/slider/slider-arrow-white.svg") center / 20px 20px no-repeat,
+        url("../img/slider/slider-arrow-white.svg") center / 20px 20px no-repeat,
         rgba(0, 0, 0, .3);
     pointer-events: none;
 }
@@ -2220,7 +2220,7 @@ footer {
     border: none;
     border-radius: 50%;
     background:
-        url("img/slider/slider-arrow-black.svg") center/20px 20px no-repeat,
+        url("../img/slider/slider-arrow-black.svg") center/20px 20px no-repeat,
         rgba(0, 0, 0, 0.05);
     cursor: pointer;
     transition: background .2s;
@@ -2233,14 +2233,14 @@ footer {
 /* отражаем стрелку */
 .hits-green__nav:hover {
     background:
-        url("img/slider/slider-arrow-black.svg") center/20px 20px no-repeat,
+        url("../img/slider/slider-arrow-black.svg") center/20px 20px no-repeat,
         rgba(0, 0, 0, 0.1);
 }
 
 /* отключённые стрелки */
 .hits-green__nav.swiper-button-disabled {
     background:
-        url("img/slider/slider-arrow-black.svg") center/20px 20px no-repeat,
+        url("../img/slider/slider-arrow-black.svg") center/20px 20px no-repeat,
         rgba(0, 0, 0, 0.03);
     pointer-events: none;
 }
@@ -2367,7 +2367,7 @@ footer {
 .specs__arrow {
     width: 24px;
     height: 24px;
-    background: url("img/arrow_down.svg") center/24px no-repeat;
+    background: url("../img/arrow_down.svg") center/24px no-repeat;
 
 }
 
@@ -2759,7 +2759,7 @@ footer {
     height: 40px;
     border: none;
     border-radius: 50%;
-    background: rgba(0, 0, 0, .05) url("img/slider/slider-arrow-black.svg") center/20px 20px no-repeat;
+    background: rgba(0, 0, 0, .05) url("../img/slider/slider-arrow-black.svg") center/20px 20px no-repeat;
     transform: translateY(-50%);
     cursor: pointer;
     transition: background .2s;
@@ -2776,13 +2776,13 @@ footer {
 
 .gallery-nav:hover {
     background:
-        url("img/slider/slider-arrow-black.svg") center/20px 20px no-repeat,
+        url("../img/slider/slider-arrow-black.svg") center/20px 20px no-repeat,
         rgba(0, 0, 0, 0.1);
 }
 
 .gallery-nav.swiper-button-disabled {
     background:
-        url("img/slider/slider-arrow-black.svg") center/20px 20px no-repeat,
+        url("../img/slider/slider-arrow-black.svg") center/20px 20px no-repeat,
         rgba(0, 0, 0, 0.03);
     pointer-events: none;
 }
@@ -3365,7 +3365,7 @@ footer {
 
 .page-404 {
     height: 842px;
-    background: url("img/404/back.png") no-repeat center 113px;
+    background: url("../img/404/back.png") no-repeat center 113px;
 }
 
 .page-404 h1 {
@@ -3405,7 +3405,7 @@ footer {
 @media(max-width:768px) {
     .page-404 {
         height: 627px;
-        background: url("img/404/back-mob.png") no-repeat center 50px/cover;
+        background: url("../img/404/back-mob.png") no-repeat center 50px/cover;
     }
 
     .page-404 h1 {
@@ -3907,7 +3907,7 @@ footer {
     border: none;
     border-radius: 50%;
     background:
-        url("img/slider/slider-arrow-black.svg") center/20px 20px no-repeat,
+        url("../img/slider/slider-arrow-black.svg") center/20px 20px no-repeat,
         rgba(0, 0, 0, 0.05);
     cursor: pointer;
     transition: background .2s;
@@ -3920,14 +3920,14 @@ footer {
 /* отражаем стрелку */
 .brands__arrow:hover {
     background:
-        url("img/slider/slider-arrow-black.svg") center/20px 20px no-repeat,
+        url("../img/slider/slider-arrow-black.svg") center/20px 20px no-repeat,
         rgba(0, 0, 0, 0.1);
 }
 
 /* отключённые стрелки */
 .brands__arrow.swiper-button-disabled {
     background:
-        url("img/slider/slider-arrow-black.svg") center/20px 20px no-repeat,
+        url("../img/slider/slider-arrow-black.svg") center/20px 20px no-repeat,
         rgba(0, 0, 0, 0.03);
     pointer-events: none;
 }
@@ -3995,7 +3995,7 @@ footer {
     content: "";
     width: 18px;
     height: 18px;
-    background: url("img/arrow-btn.svg") center/contain no-repeat;
+    background: url("../img/arrow-btn.svg") center/contain no-repeat;
 }
 
 .news__list {
@@ -4131,7 +4131,7 @@ footer {
     border: none;
     border-radius: 50%;
     background:
-        url("img/slider/slider-arrow-black.svg") center/20px 20px no-repeat,
+        url("../img/slider/slider-arrow-black.svg") center/20px 20px no-repeat,
         rgba(0, 0, 0, 0.05);
     cursor: pointer;
     transition: background .2s;
@@ -4144,14 +4144,14 @@ footer {
 /* отражаем стрелку */
 .reviews__arrow:hover {
     background:
-        url("img/slider/slider-arrow-black.svg") center/20px 20px no-repeat,
+        url("../img/slider/slider-arrow-black.svg") center/20px 20px no-repeat,
         rgba(0, 0, 0, 0.1);
 }
 
 /* отключённые стрелки */
 .reviews__arrow.swiper-button-disabled {
     background:
-        url("img/slider/slider-arrow-black.svg") center/20px 20px no-repeat,
+        url("../img/slider/slider-arrow-black.svg") center/20px 20px no-repeat,
         rgba(0, 0, 0, 0.03);
     pointer-events: none;
 }
@@ -4223,7 +4223,7 @@ footer {
 .review-card__stars li {
     width: 16px;
     height: 16px;
-    background: url("img/star.svg") center/contain no-repeat
+    background: url("../img/star.svg") center/contain no-repeat
 }
 
 .review-card__text {
@@ -4238,7 +4238,7 @@ footer {
     .review-card__stars li {
         width: 14px;
         height: 14px;
-        background: url("img/star.svg") center/contain no-repeat
+        background: url("../img/star.svg") center/contain no-repeat
     }
 
     .review-card {
@@ -4316,7 +4316,7 @@ footer {
     height: 38px;
     border: none;
     border-radius: 50%;
-    background: rgba(0, 0, 0, .15) url("img/slider/slider-arrow-white.svg") center/20px 20px no-repeat;
+    background: rgba(0, 0, 0, .15) url("../img/slider/slider-arrow-white.svg") center/20px 20px no-repeat;
 
     cursor: pointer;
     transition: background .2s;
@@ -4334,13 +4334,13 @@ footer {
 
 .hero-slider-nav:hover {
     background:
-        url("img/slider/slider-arrow-white.svg") center/20px 20px no-repeat,
+        url("../img/slider/slider-arrow-white.svg") center/20px 20px no-repeat,
         rgba(0, 0, 0, 0.3);
 }
 
 .hero-slider-nav.swiper-button-disabled {
     background:
-        url("img/slider/slider-arrow-white.svg") center/20px 20px no-repeat,
+        url("../img/slider/slider-arrow-white.svg") center/20px 20px no-repeat,
         rgba(0, 0, 0, 0.1);
     pointer-events: none;
 }
@@ -4438,19 +4438,19 @@ footer {
 
 
 .hero-block--price {
-    background-image: url("img/hero/1.png");
+    background-image: url("../img/hero/1.png");
 }
 
 .hero-block--fast {
-    background-image: url("img/hero/2.png");
+    background-image: url("../img/hero/2.png");
 }
 
 .hero-block--stock {
-    background-image: url("img/hero/3.png");
+    background-image: url("../img/hero/3.png");
 }
 
 .hero-block--free {
-    background-image: url("img/hero/4.png");
+    background-image: url("../img/hero/4.png");
 }
 
 .hero-slider-content-title {
@@ -4915,7 +4915,7 @@ p.region-delivery__note {
     width: 24px;
     height: 24px;
     display: inline-block;
-    content: url("img/delivery/Check_Big.png");
+    content: url("../img/delivery/Check_Big.png");
 
     margin-right: 10px;
 }
@@ -4924,7 +4924,7 @@ p.region-delivery__note {
     width: 18px;
     height: 18px;
     display: inline-block;
-    content: url("img/delivery/pin.png");
+    content: url("../img/delivery/pin.png");
 
     margin-right: 8px;
 }
@@ -5269,7 +5269,7 @@ p.region-delivery__note {
         width: 24px;
         height: 24px;
         display: inline-block;
-        content: url("img/delivery/Check_Big.png");
+        content: url("../img/delivery/Check_Big.png");
 
         margin-right: 10px;
     }
@@ -6085,7 +6085,7 @@ p.region-delivery__note {
     border-radius: 12px;
     padding: 34px 30px;
     background-color: #f8fff6;
-    background-image: url('img/contacts/bg.png');
+    background-image: url('../img/contacts/bg.png');
     background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
@@ -6121,7 +6121,7 @@ p.region-delivery__note {
     .contacts__about {
       padding-bottom: 200px;
       background-size: contain;
-      background-image: url('img/contacts/bg-mob.png');
+      background-image: url('../img/contacts/bg-mob.png');
       background-position: right bottom;
     }
   }
